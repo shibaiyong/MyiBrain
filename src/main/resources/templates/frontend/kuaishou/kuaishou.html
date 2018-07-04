@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>视频搜索</title>
+    <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+<link rel="shortcut icon" type="image/x-icon" href="../../../static/images/logo/favicon.ico" th:href="@{/images/logo/favicon.ico}"
+/>
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../../static/css/common/common.css" th:href="@{/css/common/common.css}"/>
+</head>
+<body>
+<style type="text/css">
+body{
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+}
+.kwai-vsw{
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+}
+.kwai-banner{
+    position: relative;
+    height: 550px;
+    background: #FFFFFF url('images/i/banner.jpg') center top no-repeat;
+    background-size: 100%;
+}
+.kwai-banner-h1{
+    position: absolute;
+    top: 134px;
+    left: 50%;
+    margin-left: -580px;
+    font-size: 34px;
+    color: #FFFFFF;
+    line-height: 34px;
+}
+.kwai-banner-h2{
+    position: absolute;
+    top: 198px;
+    left: 50%;
+    margin-left: -580px;
+    width: 560px;
+    font-size: 20px;
+    color: #FFFFFF;
+    line-height: 32px;
+}
+.kwai-banner-btn{
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    margin-left: -580px;
+    width: 140px;
+    line-height: 46px;
+    background-color: #FF8000;
+    border-radius: 100px;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+@media screen and (min-width: 1920px){
+    .kwai-banner{ 
+        background: #FFFFFF url('images/i/banner.jpg') center top -110px no-repeat; 
+        background-size: cover; 
+    }
+}
+@media screen and (max-width: 1600px){
+    .kwai-banner{
+        background: #FFFFFF url('images/i/banner.jpg') center no-repeat;
+        background-size: cover;
+    }
+    .kwai-banner-h1{
+        top: 84px;
+    }
+    .kwai-banner-h2{
+        top: 148px;
+    }
+    .kwai-banner-btn{
+        top: 310px;
+    }
+}
+
+.kwai-banner-btn:hover{
+    background-color: #ff9b19;
+}
+.kwai-p1{
+    position: relative;
+    height: 806px;
+    overflow: hidden;
+}
+.kwai-p1-desc{
+    font-size: 16px;
+    color: #666666;
+    line-height: 26px;
+    text-align: center;
+}
+.kwai-p1-img{
+    display: block;
+    width: 866px;
+    height: 488px;
+    margin: 50px auto 0 ;
+    box-shadow: 0 6px 22px 0 rgba(0,0,0,0.03);
+}
+.kwai-p1-btn{
+    position: absolute;
+    top: 596px;
+    left: 50%;
+    width: 140px;
+    line-height: 46px;
+    margin-left: -70px;
+    background-color: #FF8000;
+    border-radius: 100px;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.kwai-p1-btn:hover{
+    box-shadow: 0 8px 12px 0 rgba(255,128,0,0.20);
+    background-color: #ff9b19;
+}
+.kwai-p2-wrap{
+    background: #fbfbfb;
+}
+.kwai-p2{
+    width: 1200px;
+    height: 642px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.kwai-p1-title,
+.kwai-p2-title,
+.kwai-p3-title{
+    font-size: 32px;
+    color: #333333;
+    line-height: 32px;
+    margin: 70px 0 50px;
+    text-align: center;
+}
+.kwai-p2-plane{
+
+}
+
+.kwai-p2-item{
+    float: left;
+    width: 375px;
+    height: 420px;
+    margin-left: 37px;
+    background: #fff;
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+}
+.kwai-p2-item:hover{
+    background-color: #ff8000;
+    box-shadow: 0 8px 12px 4px rgba(218,94,19,0.20);
+}
+.kwai-p2-item .-normal{
+    display: block;
+}
+.kwai-p2-item .-hover{
+    display: none;
+}
+.kwai-p2-item:hover .-normal{
+    display: none;
+}
+.kwai-p2-item:hover .-hover{
+    display: block;
+}
+.kwai-p2-item:hover .kwai-p2-name,
+.kwai-p2-item:hover .kwai-p2-desc{
+    color: #fff;
+}
+.kwai-p2-item-0{
+    margin-left: 0;
+}
+.kwai-p2-image{
+    width: 150px;
+    height: 150px;
+    margin: 65px auto 0;
+}
+.kwai-p2-image img{
+    width: 100%;
+    height: 100%;
+}
+.kwai-p2-name{
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+    line-height: 21px;
+    margin-top: 40px;
+}
+.kwai-p2-desc{
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #747474;
+}
+.kwai-p3{
+    overflow: hidden;
+    width: 1200px;
+    height: 570px;
+    margin: 0 auto;
+}
+
+.kwai-p3-item{
+    float: left;
+    width: 260px;
+    height: 417px;
+    margin-left: 53px;
+    background: #fff;
+    overflow: hidden;
+    transition: background-color 0.5s;
+}
+.kwai-p3-item-0{
+    margin-left: 0;
+}
+.kwai-p3-image{
+    width: 150px;
+    height: 150px;
+    margin: 30px auto 0;
+}
+.kwai-p3-image img{
+    width: 100%;
+    height: 100%;
+}
+.kwai-p3-name{
+    text-align: center;
+    font-size: 22px;
+    color: #333;
+    line-height: 21px;
+    margin-top: 40px;
+    transition: color 0.5s;
+}
+.kwai-p3-desc{
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #747474;
+    transition: color 0.5s;
+}
+</style>
+
+<div class="kwai-vsw">
+    <div th:include="frontend/common/main-header :: header"></div>
+    <div class="kwai-banner">
+        <div class="kwai-banner-h1">视频搜索</div>
+        <div class="kwai-banner-h2">视频搜索是快手公司为人民日报新媒体创作大脑推出的多媒体内容搜索产品，视频搜索利用国际领先的人工智能技术，实现对视频、音频和图像的多媒体理解，为用户提供关键字、发布时间和地点等维度的精准搜索，快速发现优质选题或素材。</div>
+        <a class="kwai-banner-btn goregister" href="#">申请试用</a>
+    </div>
+    <div class="kwai-p1">
+        <div class="kwai-p1-title">视频搜索</div>
+        <div class="kwai-p1-desc">依托于快手平台来自全国各地的短视频资源，采用业界领先的多媒体理解和搜索技术，可根据关键字、发布<br/>时间、发布地点精准搜索海量视频资源，提高媒体采编效率和质量。</div>
+        <div class="kwai-p1-desc" style="margin-top:30px;font-size:14px;color:#999999;">体验前请先注册快手帐号</div>
+        <img class="kwai-p1-img" src="./images/i/home_img_page_normal@2x.png"/>
+        <a class="kwai-p1-btn goregister" href="#">申请试用</a>
+    </div>
+    <div class="kwai-p2-wrap">
+        <div class="kwai-p2">
+            <div class="kwai-p2-title">应用场景</div>
+            <div class="kwai-p2-panel">
+                <div class="kwai-p2-item kwai-p2-item-0">
+                    <div class="kwai-p2-image">
+                        <img src="./images/i/normal/home_ico_Clues to the insight into_normal@2x.png" class="-normal"/>
+                        <img src="./images/i/hover/home_ico_Clues to the insight into_hover@2x.png" class="-hover"/>
+                    </div>
+                    <div class="kwai-p2-name">内容多元化</div>
+                    <div class="kwai-p2-desc">海量UGC素材有效扩展资讯品类<br/>提升内容吸引力</div>
+                </div>
+                <div class="kwai-p2-item">
+                    <div class="kwai-p2-image">
+                        <img src="./images/i/normal/home_ico_Content diversification_normal@2x.png" class="-normal"/>
+                        <img src="./images/i/hover/home_ico_Content diversification_hover@2x.png" class="-hover"/>
+                    </div>
+                    <div class="kwai-p2-name">线索洞察</div>
+                    <div class="kwai-p2-desc">便捷高效发现优质短视频资源<br/>展现精彩世界</div>
+                </div>
+                <div class="kwai-p2-item">
+                    <div class="kwai-p2-image">
+                        <img src="./images/i/normal/home_ico_Integrating media effect_normal@2x.png" class="-normal"/>
+                        <img src="./images/i/hover/home_ico_Integrating media effect_hover@2x.png" class="-hover"/>
+                    </div>
+                    <div class="kwai-p2-name">融媒效应</div>
+                    <div class="kwai-p2-desc">打破各类媒体的内容边界<br/>轻松实现媒体间有效融合</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kwai-p3-wrap">
+        <div class="kwai-p3">
+            <div class="kwai-p3-title">特色</div>
+            <div class="kwai-p3-panel">
+                <div class="kwai-p3-item kwai-p3-item-0">
+                    <div class="kwai-p3-image">
+                        <img src="./images/i/normal/home_ico_diverse_normal@2x.png" class="-normal"/>
+                    </div>
+                    <div class="kwai-p3-name">多样</div>
+                    <div class="kwai-p3-desc">海量UGC视频<br/>满足全国各地媒体内容产出需求</div>
+                </div>
+                <div class="kwai-p3-item">
+                    <div class="kwai-p3-image">
+                        <img src="./images/i/normal/home_ico_accurate_normal@2x.png" class="-normal"/>
+                    </div>
+                    <div class="kwai-p3-name">精准</div>
+                    <div class="kwai-p3-desc">先进的视频理解技术<br/>极大提高搜索准确率</div>
+                </div>
+                <div class="kwai-p3-item">
+                    <div class="kwai-p3-image">
+                        <img src="./images/i/normal/home_ico_fast_normal@2x.png" class="-normal"/>
+                    </div>
+                    <div class="kwai-p3-name">快速</div>
+                    <div class="kwai-p3-desc">强大的搜索性能<br/>海量资源瞬间呈现</div>
+                </div>
+                <div class="kwai-p3-item">
+                    <div class="kwai-p3-image">
+                        <img src="./images/i/normal/home_ico_High quality_normal@2x.png" class="-normal"/>
+                    </div>
+                    <div class="kwai-p3-name">优质</div>
+                    <div class="kwai-p3-desc">优质视频首页自动推荐<br/>降低搜寻时间成本</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="frontend/common/footer :: footer"></div>
+</body>
+</html>
+<script src="../../../static/js/frontend/plugin/showtoast/tip.js" th:src="@{/js/frontend/plugin/showtoast/tip.js}"></script>
+<script src="../../../static/js/frontend/common/minHeader.js" th:src="@{/js/frontend/common/minHeader.js}"></script>
+<script src="../../../static/js/frontend/kuaishou/kuaishou.js" th:src="@{/js/frontend/kuaishou/kuaishou.js}"></script>

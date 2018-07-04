@@ -1,0 +1,83 @@
+body { background-color: #fff; font-family: "PingFangSC-Regular", "ArialMT"; min-width: 1000px;}
+.mt10 { margin-top: 10px; }
+.mt40 { margin-top: 40px; }
+.mt75 { margin-top: 75px }
+.mt85 { margin-top: 85px }
+.mt100 { margin-top: 100px }
+.mt120 { margin-top: 120px }
+.mt145 { margin-top: 145px; }
+.mt150 { margin-top: 150px; }
+.mt165 { margin-top: 165px; }
+.mb100 { margin-bottom: 100px; }
+.mb70 { margin-bottom: 70px; }
+.mr-20 { margin-right: -20px; }
+.ml-20 { margin-left: -20px; }
+.ml-25 { margin-left: -25px; }
+.pl20 { padding-left: 20px; }
+.pl130 { padding-left: 130px; }
+.pr65 { padding-right: 65px; }
+.tal { text-align: left }
+.tac { text-align: center }
+.cor_f { color: #fff; }
+.cor_0 { color: #000; }
+.cor_6 { color: #666; }
+.cor_82 { color: #828282; }
+.cf:after { content: ""; visibility: hidden; display: block; height: 0; clear: both }
+.header { width: 100%; background-color: #fff }
+.auto-w1000 { width: 1000px; margin: 0 auto }
+.ov { overflow: hidden; zoom: 1 }
+.fl { float: left; }
+.fr { float: right; }
+.trans-link { float: right; width: 90px; line-height: 87px; font-size: 22px; color: #5E5D5D; margin-left: 40px; position: relative }
+.trans-link:active { color: #5E5D5D; }
+.icon-bottom { position: absolute; width: 100%; height: 4px; left: 0; bottom: 0; z-index: 5; background-color: #E72112; display: none }
+.trans-link.current { color: #E72112; }
+.trans-link.current .icon-bottom { display: block }
+.banner-page2 { height: 550px; background: url("../../images/phonetic_transcription/bg_page2_banner.png") center center no-repeat; }
+.banner-page1 { height: 550px; background: url("../../images/phonetic_transcription/bg_page1_banner.png") center center no-repeat; }
+.left-area { float: left; width: 538px; margin-top: 90px }
+.txt-1 { font-size: 34px; line-height: 42px; margin-bottom: 25px }
+.txt-2 { font-size: 20px; line-height: 32px; width:386px;text-align: justify;}
+.btn-parent { margin-top: 40px }
+.expe-btn { display: inline-block; vertical-align: top; width: 148px; height: 46px; line-height: 46px; text-align: center; font-size: 16px; color: #fff; background-color: #E72112; position: relative }
+.expe-btn:active { color: #fff }
+.expe-btn:after { position: absolute; display: block; content: ""; width: 6px; height: 6px; line-height: 0; border-width: 1px; border-style: solid solid dashed dashed; border-color: #fff #fff transparent transparent; right: 16px; top: 50%; margin-top: -4px; transform: rotate(45deg); -webkit-transform: rotate(45deg) }
+.txt-3 { font-size: 30px; line-height: 42px; color: #000; text-align: center; margin-bottom: 35px }
+.txt-4 { width: 486px; margin: 0 auto 15px; font-size: 18px; color: #282828; line-height: 25px; text-align: center }
+.zh-cn-img { display: inline-block; vertical-align: top }
+.expe-btn-2 { display: inline-block; vertical-align: top; line-height: 22px; text-align: center; font-size: 16px; color: #e72112; position: relative; padding-right: 30px }
+.expe-btn-2:after { position: absolute; display: block; content: ""; width: 5px; height: 5px; line-height: 0; border-width: 1px; border-style: solid solid dashed dashed; border-color: #e72112 #e72112 transparent transparent; right: 16px; top: 50%; margin-top: -3px; transform: rotate(45deg); -webkit-transform: rotate(45deg) }
+.expe-btn-2:active { color: #e72112 }
+.app-item { float: left; width: 310px; padding: 8px 15px; background-color: #fff; height: 360px; margin-right: 35px; box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, .1); -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, .1); position: relative }
+.app-item:nth-child(3n) { margin-right: 0px }
+.top-line { position: absolute; display: block; width: 98px; height: 4px; background-color: #ff6766; top: 0; left: 50%; margin-left: -49px; box-shadow: 0px 4px 10px 0px #FF6766; -webkit-box-shadow: 0px 4px 10px 0px #FF6766 }
+.card-num { display: inline-block; width: 42px; font-size: 36px; height: 42px; line-height: 42px; color: #e4e4e4; text-align: center }
+.icon-scene { height: 130px; margin-bottom: 20px; background-position: center center; background-repeat: no-repeat }
+.scene-01 { background-image: url("../../images/phonetic_transcription/bg_page2_scene_01.png") }
+.scene-02 { background-image: url("../../images/phonetic_transcription/bg_page2_scene_02.png") }
+.scene-03 { background-image: url("../../images/phonetic_transcription/bg_page2_scene_03.png") }
+.txt-5 { line-height: 28px; font-size: 20px; color: #000; text-align: center; margin-bottom: 20px }
+.txt-6 { width: 85%; margin: 0 auto; text-align: center; line-height: 20px; font-size: 14px; color: #666 }
+.txt-7 { line-height: 42px; padding: 25px 0; font-size: 30px; color: #000; text-align: center }
+.advantage-item { float: left; width: 310px; padding: 0px 15px; background-color: #fff; height: 420px; margin-right: 35px; box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, .1); -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, .1); position: relative; }
+.advantage-item:nth-child(3n) { margin-right: 0px }
+.icon-advantage { height: 200px; margin-top: 30px; margin-bottom: 40px; background-position: center center; background-repeat: no-repeat; }
+.advantage-01 { background-image: url("../../images/phonetic_transcription/bg_page2_advantage_01.png") }
+.advantage-02 { background-image: url("../../images/phonetic_transcription/bg_page2_advantage_02.png") }
+.advantage-03 { background-image: url(../../images/phonetic_transcription/bg_page2_advantage_03.png) }
+.code-parent { width: 120px; height: 120px; padding: 8px; background-color: #fff; }
+.code-img { display: block; width: 100%; height: 100%; }
+.expe-btn-3 { display: block; width: 120px; height: 30px; line-height: 32px; background-color: #e72112; background-image: url("../../images/phonetic_transcription/bg_page1_scanning.png"); background-size: 16px; background-position: 12px 8px; background-repeat: no-repeat; font-size: 16px; color: #fff; padding: 0 20px; text-align: right; }
+.expe-btn-3:active { color: #fff; }
+.txt-8 { margin-top: 10px; margin-bottom: 35px; height: 42px; line-height: 42px; font-size: 30px; }
+.trans-advantage-01 { background-image: url("../../images/phonetic_transcription/bg_page1_advantage_01.png") }
+.trans-advantage-02 { background-image: url("../../images/phonetic_transcription/bg_page1_advantage_02.png") }
+.trans-advantage-03 { background-image: url("../../images/phonetic_transcription/bg_page1_advantage_03.png") }
+
+
+.tal{
+    display: none;
+}
+.expe-cursor{
+	cursor: default;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>注册</title>
+    <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+<link rel="shortcut icon" type="image/x-icon" href="../../../static/images/logo/favicon.ico" th:href="@{/images/logo/favicon.ico}"
+/>
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../../static/css/common/common.css" th:href="@{/css/common/common.css}"/>
+    <style>
+        .login_content{
+            height: auto;
+            padding:55px 0;
+            margin-bottom:60px;
+        }
+        .form-inner-wrapper{
+            width: 100%;
+            height: 100%;            
+        }
+        .form-horizontal{ 
+            margin: 0 auto;
+            width: 528px;
+            height: auto;
+        }
+        .user_error_tip,.password_error_tip,.mobile_error_tip,.email_error_tip,.company_error_tip,.job_error_tip,.wechat_error_tip{
+            margin-bottom: 0;
+            color:#fe4246;
+            visibility: hidden;
+        }
+        .login_content .login_titlee{
+            font-size:24px;
+            text-align: center;
+            font-weight: bold;
+            height: 60px;
+            line-height: 60px;
+        }
+        .form-group.fixedcenter label span{
+            color:#fe4246;
+        }
+        .y_login{
+        	display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="header" th:include="frontend/common/behind-header :: header"></div>
+<div class='login_content'>
+    <div class="form-inner-wrapper">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10 login_titlee">
+                    申请注册
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 user_error_tip">
+                    姓名不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputName" class="col-sm-2 control-label"><span>&#x2A;</span>&nbsp;姓名</label>
+                <div class="col-sm-10">
+                    <input type="text" autocomplete="off" class="form-control username" id="inputName" placeholder="请输入您的姓名" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 mobile_error_tip">
+                    手机号不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputMobile" class="col-sm-2 control-label"><span>&#x2A;</span>&nbsp;手机</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control mobile" id="inputMobile" placeholder="请输入您的11位手机号" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 email_error_tip">
+                    邮箱不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputMail" class="col-sm-2 control-label"><span>&#x2A;</span>&nbsp;邮箱</label>
+                <div class="col-sm-10">
+                    <input type="text" autocomplete="off" name="email" class="form-control" id="inputMail" placeholder="请输入您的邮箱" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 password_error_tip">
+                    密码不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputPwd" class="col-sm-2 control-label"><span>&#x2A;</span>&nbsp;密码</label>
+                <div class="col-sm-10">
+                    <input type="text" oninput="if(this.value==''){this.type='text'}else(this.type='password')"  class="form-control" id="inputPwd" placeholder="请输入至少6位密码，可输入英文，数字和常用符号" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 wechat_error_tip">
+                    微信不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label class="col-sm-2 control-label">&nbsp;微信</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="wechat" placeholder="请输入微信号或绑定的手机号" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 company_error_tip">
+                    单位不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputUnit" class="col-sm-2 control-label"><span>&#x2A;</span>&nbsp;单位</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control company" id="inputUnit" placeholder="请输入您所属单位名称或公司名称" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 job_error_tip">
+                    职位不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputPosition" class="col-sm-2 control-label"><span>&#x2A;</span>&nbsp;职位</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control job" id="inputPosition" placeholder="请输入您所属单位或公司的职位" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10 login_btn">
+                    <button class="btn btn-default" id="register">提交</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10 login_btn">
+                    已有账号，<a id="goLogin" class='fontblod' href='javascript:;' style="color:red;">直接登录</a>
+                </div>
+            </div>
+        </form>    
+    </div>
+</div>
+<div id="loginBottom" th:include="frontend/common/footer :: footer"></div>
+<!-- Modal -->
+<div class="modal fade" id="alertDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p style="text-align:center;margin-bottom:0px">用户名或密码错误</p>
+
+                <div style="margin-top:10px;text-align:right">
+                    <button type="button" class="btn btn-red btn-sm" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="../../../static/js/frontend/plugin/showtoast/tip.js" th:src="@{/js/frontend/plugin/showtoast/tip.js}"></script>
+<script src="../../../static/js/frontend/plugin/bootstrap.min.js" th:src="@{/js/frontend/plugin/bootstrap.js}"></script>
+<script src="../../../static/js/frontend/common/behindHeader.js" th:src="@{/js/frontend/common/behindHeader.js}"></script>
+<script th:src="@{/js/frontend/login/shi256.js}"></script>
+<script th:src="@{/js/frontend/register/register.js}"></script>

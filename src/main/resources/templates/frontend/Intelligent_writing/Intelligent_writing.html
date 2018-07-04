@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>智能写作</title>
+    <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+<link rel="shortcut icon" type="image/x-icon" href="../../../static/images/logo/favicon.ico" th:href="@{/images/logo/favicon.ico}"
+/>
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../../static/css/common/common.css" th:href="@{/css/common/common.css}"/>
+    <link rel="stylesheet" href="../../../static/css/intelligent_writing/intelligent_writing.css" th:href="@{/css/intelligent_writing/intelligent_writing.css}"/>
+</head>
+<body>
+<input type="hidden" id="ctx" th:value="${ctx}"/>
+<div th:include="frontend/common/main-header :: header"></div>
+<div class="intelligent_writing">
+    <div class="introduce_banner">
+        <div class="introduce_banner_content">
+            <div class="text_content">
+                <h3 class="boldfont">智能写作</h3>
+                <P>智能写作是百度公司在人民日报人民号创作平台推出的“创作大脑”，充分利用百度在内容理解、语言生成、知识推理、机器学习等方面的技术积累，为用户提供内容纠错、发文助手、自动封面三项创作服务。</P>
+                <div class="apply_try" style="display: none;">
+                    <button type="button" class="goregister btn btn-danger" style="display: none;">申请试用</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='fun_iwrite'>
+    <ul class="iwrite_content">
+        <li style="height: 315px">
+            <div class="iwrite_titleTip floatleft">
+                <div class="iwrite_title">
+                    <div class="iwrite_show mediumfont">内容纠错</div>
+                </div>
+                <p class="modirywrong_special">智能识别内容中的错别字，且输出正确内容，供用户选择替换。</p>
+            </div>
+            <div class="write_img_container width55 img_recovery floatright"></div>
+        </li>
+        <li style="height: 315px">
+            <div class="write_img_container width55 img_assistant floatleft"></div>
+            <div class="iwrite_titleTip floatright">
+                <div class="iwrite_title">
+                    <!--<div class="filehelp_img"></div>-->
+                    <div class="iwrite_show mediumfont">发文助手</div>
+                </div>
+                <p>智能识别内容排版中存在的问题，提示且指导作者调整内容排版格式；智能识别内容中存在广告、联系方式等不符合质量要求的内容，降低用户发文失败比例。</p>
+            </div>
+        </li>
+        <li style="height: 406px">
+            <div class="iwrite_titleTip floatleft">
+                <div class="iwrite_title">
+                    <!--<div class="autocover_img"></div>-->
+                    <div class="iwrite_show mediumfont">自动封面</div>
+
+                </div>
+                <p>以图片和内容相关性及内容质量为模型，为作者智能生成质量最佳的文章封面图。</p>
+            </div>
+            <div class="write_img_container floatright" style="width:660px;">
+                <img class="iwrite_img" src="./images/intelligent_writing/zidongfengmian@2x.png"/>
+            </div>
+        </li>
+    </ul>
+    <div class="continue-knowe">
+        <div class="angle_right"><div class="underline mediumfont"><span>继续了解下一功能</span><a href="javascript:;">智媒引擎</a></div>
+        </div>
+    </div>
+</div>
+<div class="container info_enter">
+    <div class="info_enter_item">
+        <div class="info_enter_item_left">
+            <p class="mediumfont">立即开始吧</p>
+            <p class="mediumfont">仅需提供基本资料，便可使用"创作大脑"</p>
+        </div>
+        <div class="info_enter_item_right">
+            <div class="info_rigster_outer">
+                <div class="register_key_bg"></div>
+                <button class="btn info_rigster mediumfont">立即注册</button>
+            </div>
+            <div class="info_login_outer">
+                <div class="login_key_bg"></div>
+                <button class="btn info_login mediumfont">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="frontend/common/footer :: footer"></div>
+</body>
+</html>
+<script src="../../../static/js/frontend/plugin/showtoast/tip.js" th:src="@{/js/frontend/plugin/showtoast/tip.js}"></script>
+<script src="../../../static/js/frontend/common/minHeader.js" th:src="@{/js/frontend/common/minHeader.js}"></script>
+<script src="../../../static/js/frontend/Intelligent_writing/Intelligent_writing.js" th:src="@{/js/frontend/Intelligent_writing/Intelligent_writing.js}"></script>
+
+

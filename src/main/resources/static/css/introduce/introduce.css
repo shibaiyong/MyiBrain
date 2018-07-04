@@ -1,0 +1,220 @@
+/* banner样式 */
+ .introduce_banner_wrapper {
+    background: #102766;
+ }
+ .introduce_banner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    height: 550px;
+    background: url(../../images/introduce/brain_introduce_02.png) no-repeat;
+    /* background-size: 100%; */
+ }
+ @media screen and (max-width: 1360px) {
+    .introduce_banner {
+        background-position: -120px 0;
+    }
+ }
+
+.introduce_banner_content {
+    margin: 0 auto;
+    width: 78%;
+    /* padding: 0 20px; */
+    height: 100%;
+}
+.introduce_banner_content::before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    display: inline-block;
+    display: inline-block;
+    vertical-align: middle;
+    visibility: hidden;
+}
+.text_content {
+    display: inline-block;
+    vertical-align: middle;
+}
+.text_content h3 {
+    color: white;
+    font-size: 34px;
+    width: 366px;
+    margin-bottom: 24px;
+}
+.text_content p {
+    width: 524px;
+    color: white;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: justify;
+}
+
+/* 功能介绍区 */
+.fun_introduce{
+    width: 100%;
+    margin-top: 120px;
+    background-color: #fff;
+    height: auto;
+}
+.fun_introduce_content{
+    margin: 0 auto;
+    width: 1220px;
+    padding: 0 20px;
+    height: auto;
+}
+.fun_introduce .fontblod{
+    margin: 0 auto;
+    width: 100%;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 49px;
+}
+.fun_content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.fun_content .item_content {
+    float: left;
+    width: 376px;
+    height: 436px;
+    padding: 50px 44px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+.fun_content .item_content li img{
+    width: 152px;
+    height: 152px;
+    border: none;
+}
+ .fun_content .item_content:nth-child(3n){
+     margin-right: 0;
+ }
+ .fun_content .item_content li:nth-child(3) {
+     color: #444;
+     line-height: 24px;
+     font-size: 16px;
+     text-align: justify;
+ }
+ .fun_content .item_content li:nth-child(2) {
+     font-size: 24px;
+ }
+ .fun_content .item_content li+li {
+     margin-top: 30px;
+ }
+
+ /* 技术优势 */
+ .fun_tec {
+    margin: 0 auto;
+    width: 1220px;
+    padding: 0 20px;
+ }
+.fun_tec .fontblod {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+.fun_tec_content{
+    margin-top: 49px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.tec_content_left{
+    float: left;
+    width: 775px;
+    height: 525px;
+    border: 1px solid #ddd;
+}
+.tec_content_left >.tec_content_left_details{
+    width: 100%;
+    height: 175px;   
+    padding:25px 53px;
+    box-sizing: border-box;
+    border-bottom:none;
+}
+.tec_content_left>.tec_content_left_details:nth-child(2){
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.displayin_left,
+.displayin_right{
+    display: inline-block;
+    vertical-align: middle;
+}
+.displayin_robot img{
+    width: 96px;
+    height: 96px;
+}
+.displayin_diamond img {
+    width: 96px;
+    height: 96px;
+}
+.displayin_rocket img {
+    width: 96px;
+    height: 96px;
+}
+.displayin_right>.textcenter>li:last-child {
+    font-size: 16px;
+}
+.displayin_right .textcenter>li:nth-child(2) {
+    padding-left: 48px;
+    letter-spacing: 1px;
+}
+.displayin_right>.textcenter>.fontblod {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #444;
+}
+.tec_content_right{
+    float: right;
+    padding: 135px 0;
+    width: 405px;
+    height: 525px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    text-align: center; 
+}
+.tec_content_right img{
+    width: 80%;
+}
+
+/* 申请试用 */
+.apply_try {
+    margin-top: 30px;
+    text-align: left;
+}
+.goregister_wrapper{
+    margin: 70px auto;
+    width: 1220px;
+    padding: 0 20px;
+    height: auto;
+    text-align: center;
+}
+.apply_try>.goregister,
+.goregister_wrapper > .goregister {
+    display: inline-block;
+    width: 140px;
+    height: 46px;
+    border-radius: 23px;
+    line-height: 46px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+.apply_try>.goregister:hover,
+.goregister_wrapper > .goregister:hover {
+    background: #ff6600;
+    text-decoration: none;
+}

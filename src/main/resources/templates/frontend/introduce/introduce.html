@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>智媒引擎</title>
+    <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+<link rel="shortcut icon" type="image/x-icon" href="../../../static/images/logo/favicon.ico" th:href="@{/images/logo/favicon.ico}"
+/>
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../../static/css/common/common.css" th:href="@{/css/common/common.css}"/>
+    <link rel="stylesheet" href="../../../static/css/introduce/introduce.css" th:href="@{/css/introduce/introduce.css}" />
+</head>
+<body>
+<input type="hidden" id="ctx" th:value="${ctx}"/>
+<div th:include="frontend/common/main-header :: header"></div>
+<div class="introduce_banner_wrapper">
+    <div class="introduce_banner">
+        <div class="introduce_banner_content">
+            <div class="text_content">
+                <h3 class="fontblod" style="font-size: 34px">智媒引擎</h3>
+                <P>荣之联利用业界领先的自然语言处理技术（NLP）和数据挖掘算法，将杂乱的新闻数据整理为安全、标准、有序的可用信息，对实时新闻、新闻热点、新闻事件进行深入分析、最终为媒体采编提供新闻知识、新闻线索和可视化分析结果。</P>
+                <div class="apply_try textleft"><a href="#" class="goregister btn-danger">申请试用</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='fun_introduce width100'>
+    <div class="fun_introduce_content">
+        <h3 class="fontblod">功能介绍</h3>
+        <div class="fun_content">
+            <ul class="item_content">
+                <li><img src="./images/introduce/weinituijian.png"/></li>
+                <li class="fontblod">为你推荐</li>
+                <li>结合用户特征静态和用户行为动态建立用户画像，实现新闻智能推荐，实现新闻找人。</li>
+            </ul>
+            <ul class="item_content">
+                <li><img src="./images/introduce/xinwenxiansuo.png"/></li>
+                <li class="fontblod">新闻线索</li>
+                <li>基于百万级新闻线索语料，通过机器学习的方式自动筛选出有价值的新闻给用户。 </li>
+            </ul>
+            <ul class="item_content">
+                <li><img src="./images/introduce/redianfaxian.png" /></li>
+                <li class="fontblod">热点发现</li>
+                <li>实时计算全网最新新闻，按地区、分类、载体聚合热点话题，并分析热度趋势和负面指数。</li>
+            </ul>
+            <ul class="item_content">
+                <li><img src="./images/introduce/xinxidingzhi.png"/></li>
+                <li class="fontblod">信息定制</li>
+                <li>将用户关注新闻源最新发布内容统一汇聚到一个页面进行展示，节省编辑记者网上冲浪的时间。</li>
+            </ul>
+            <ul class="item_content">
+                <li><img src="./images/introduce/shijianfenxi.png"/></li>
+                <li class="fontblod">事件分析</li>
+                <li>将用户关注新闻源最新发布内容统一汇聚到一个页面进行展示，节省编辑记者网上冲浪的时间。</li>
+            </ul>
+            <ul class="item_content">
+                <li><img src="./images/introduce/pinglunfenxi.png"/></li>
+                <li class="fontblod">评论分析</li>
+                <li>聚合事件评论、抽取评论热词、分析评论走势、统计评论地域分布和评论情感分布。</li>
+            </ul>
+            <ul class="item_content">
+                <li><img src="./images/introduce/xinxijiansuo.png"/></li>
+                <li class="fontblod">信息检索</li>
+                <li>提供图片、视频、新闻的单独检索，并对检索结果进行排重展示。</li>
+            </ul>
+            <ul class="item_content">
+                <li><img src="./images/introduce/yijianjiangao.png"/></li>
+                <li class="fontblod">一键建稿</li>
+                <li>提供图片、视频、新闻的单独检索，并对检索结果进行排重展示。</li>
+            </ul>
+            <ul class="item_content">
+                <li><img src="./images/introduce/citiaobaike.png"/></li>
+                <li class="fontblod">词条百科</li>
+                <li>自动识别新闻资讯正文中的主要词条，赋予词条百科注释，帮助编辑深入理解新闻内容。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class='fun_tec clearFix'>
+    <h3 class="fontblod">技术优势</h3>
+    <div class="fun_tec_content">
+        <div class='tec_content_left'>
+            <div class="tec_content_left_details">
+                <div class="displayin_left width14 displayin_robot">
+                    <img src='./images/introduce/Robot.png'/>
+                </div>
+                <div class="displayin_right width84">
+                    <ul class="textcenter">
+                        <li class='fontblod'>领先的专业技术能力</li>
+                        <li class="textleft">拥有千万级的新闻语料库，并将深度学习技术与自然语言处理技术深度融合。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tec_content_left_details">
+                <div class="displayin_left width14 displayin_diamond">
+                    <img src='./images/introduce/Diamond.png'/>
+                </div>
+                <div class="displayin_right width84 ">
+                    <ul class="textcenter">
+                        <li class='fontblod'>个性化的新闻采集</li>
+                        <li class="textleft">提供已有主流媒体的新闻采集外支持用户自定义新闻源和采集频率（高至秒级）。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tec_content_left_details">
+                <div class="displayin_left width14 displayin_rocket">
+                    <img src='./images/introduce/Rocket.png'/>
+                </div>
+                <div class="displayin_right width84">
+                    <ul class="textcenter">
+                        <li class='fontblod'>高效稳定的服务</li>
+                        <li class="textleft">专业的运维团队和7*24小时的运维服务，保障系统高效稳定运行。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='logoclu tec_content_right'>
+            <img src='./images/introduce/logo_clou.png'/>
+        </div>
+    </div>
+</div>
+
+<div class="goregister_wrapper">
+    <a class="goregister btn-danger">申请试用</a>
+</div>
+
+<div class="textcenter fontblod" style="margin:40px 0;font-size:24px;display: none;">服务咨询</div>
+<div class='fun_tec clearFix' style="display: none;">
+    <div class='phone displayin_block'>
+        <img src="./images/introduce/phoneandemail_09.jpg"/>
+        <span class="fontblod">010-62602018</span>
+    </div>
+    <div class='phone displayin_block' style="margin-left:80px;">
+        <img src="./images/introduce/phoneandemail_11.png"/>&nbsp;
+        <span class="fontblod">资讯邮箱：inews@ronglian.com</span>
+    </div>
+    <p style="font-size:16px;margin-top:20px;">如想了解产品详情或获取服务，可提交合作意向、机构相关信息、联系方式至邮箱，运营人员将尽快与您联系。</p>
+</div>
+<div th:include="frontend/common/footer :: footer"></div>
+</body>
+</html>
+<script src="../../../static/js/frontend/plugin/showtoast/tip.js" th:src="@{/js/frontend/plugin/showtoast/tip.js}"></script>
+<script src="../../../static/js/frontend/common/minHeader.js" th:src="@{/js/frontend/common/minHeader.js}"></script>
+<script src="../../../static/js/frontend/introduce/introduce.js" th:src="@{/js/frontend/introduce/introduce.js}"></script>

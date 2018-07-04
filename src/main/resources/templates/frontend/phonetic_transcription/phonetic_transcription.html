@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<title>语音转写</title>
+	<script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+<link rel="shortcut icon" type="image/x-icon" href="../../../static/images/logo/favicon.ico" th:href="@{/images/logo/favicon.ico}"
+/>
+	<link rel="stylesheet" href="../../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+	<link rel="stylesheet" href="../../../static/css/common/common.css" th:href="@{/css/common/common.css}"/>
+	<link rel="stylesheet" href="../../../static/css/phonetic_transcription/style.css" th:href="@{/css/phonetic_transcription/style.css}"/>
+</head>
+<body>
+	<div class="box mb100 cf">
+
+		<!-- header -->
+		<div th:include="frontend/common/main-header :: header"></div>
+
+		<!-- banner -->
+		<div class="banner-page1">
+			<div class="auto-w1000 cf">
+				<div class="left-area">
+					<p class="txt-1 cor_0">语音转写</p>
+					<p class="txt-2 cor_6">讯飞听见APP是一款语音转文字的手机应用，依托科大讯飞基于世界领先水平的智能语音及语言技术提供高效的语音转文字服务，识别率高达95%＋，1小时音频最快5分钟出稿！</p>
+					<div class="mt40">
+						<p class="code-parent"><img class="code-img" src="./images/phonetic_transcription/bg_page1_code.png" alt=""/></p>
+						<div class="expe-btn-3 expe-cursor">扫码下载</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="content cf">
+			<div class="auto-w1000">
+
+				<!-- 中文转写 -->
+				<div class="mt120 cf">
+					<img class="fr mr-20" src="./images/phonetic_transcription/bg_page1_function_01.png" alt=""/>
+					<div class="ov">
+						<p class="txt-8 cor_0">中文转写</p>
+						<p class="txt-2 cor_82 mb70">1小时音频最快5分钟出稿，标准普通话识别准确率最高可达95%以上；针对略带地域口音、音量小、有背景噪音的音频，提供人工服务，准确率更高。</p>
+						<p class="tal">
+							<a href="https://www.iflyrec.com/" target="_blank" class="expe-btn-2">立即体验</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- 英文转写 -->
+				<div class="mt150 cf">
+					<img class="fl ml-20" src="./images/phonetic_transcription/bg_page1_function_02.png" alt=""/>
+					<div class="ov pl130">
+						<p class="txt-8 cor_0">英文转写</p>
+						<p class="txt-2 cor_82 mb70">1小时音频最快5分钟出稿，发音标准、音质清晰的音频准确率最高可达90%以上。</p>
+						<p class="tal">
+							<a href="https://www.iflyrec.com/html/englishTrans/englishTranslateDetail.html" target="_blank" class="expe-btn-2">立即体验</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- 维吾尔语转写 -->
+				<div class="mt165 cf">
+					<img class="fr ml-20" src="./images/phonetic_transcription/bg_page1_function_03.png" alt=""/>
+					<div class="ov pr65">
+						<p class="txt-8 cor_0" style="margin-top: 20px;">维语转写</p>
+						<p class="txt-2 cor_82 mb70">将维吾尔语音频或视频文件输出文稿或字幕文本。</p>
+						<p class="tal">
+							<a href="https://www.iflyrec.com/html/products/otherServices.html?type=wyfw" target="_blank" class="expe-btn-2">立即体验</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- 我们的优势 -->
+				<div class="mt145">
+					<p class="txt-7">我们的优势</p>
+					<div class="cf">
+						<ul class="advantage-list cf">
+							<li class="advantage-item ov">
+								<div class="icon-advantage trans-advantage-01"></div>
+								<p class="txt-5">准确</p>
+								<p class="txt-6">准确率可达95%+</p>
+							</li>
+							<li class="advantage-item ov">
+								<div class="icon-advantage trans-advantage-02"></div>
+								<p class="txt-5">高效</p>
+								<p class="txt-6">1小时音频最快5分钟出稿</p>
+							</li>
+							<li class="advantage-item ov">
+								<div class="icon-advantage trans-advantage-03"></div>
+								<p class="txt-5">智能</p>
+								<p class="txt-6">对识别结果语句智能预测其对话语境，提供智能断句和标点符号的预测</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:include="frontend/common/footer :: footer"></div>
+</body>
+</html>
+<script src="../../../static/js/frontend/plugin/showtoast/tip.js" th:src="@{/js/frontend/plugin/showtoast/tip.js}"></script>
+<script src="../../../static/js/frontend/common/minHeader.js" th:src="@{/js/frontend/common/minHeader.js}"></script>
+<script src="../../../static/js/frontend/phonetic_transcription/phonetic_transcription.js" th:src="@{/js/frontend/phonetic_transcription/phonetic_transcription.js}"></script>

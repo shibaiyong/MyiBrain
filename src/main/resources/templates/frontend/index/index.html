@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>创作大脑</title>
+    <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../static/images/logo/favicon.ico" th:href="@{/images/logo/favicon.ico}" />
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../../static/css/common/common.css" th:href="@{/css/common/common.css}"/>
+    <link rel="stylesheet" href="../../../static/css/index/index.css" th:href="@{/css/index/index.css}"/>
+</head>
+<body>
+<div th:include="frontend/common/main-header :: header"></div>
+<div class="index_banner_wrapper">  
+    <div class="index_banner">
+        <div class="banner_img"></div>
+        <div class="text_content"> 
+            <P class="boldfont">为内容创作赋能</P>
+            <P class="mediumfont">新闻工作者的生产力工具平台</P>
+        </div>
+    </div>
+</div>
+<div class="container tip_top">
+    <ul class="tip_top_item">
+        <li class="width20 item_active" data-type="zzxz">
+            <a href="javascript:void(0);" class="thumbnail">
+                <h4 class="item_title mediumfont">智能写作</h4>
+                <p class="item_desc">内容纠错、发文助手、自动封面</p>
+                <div class="item_img">
+                    <div id="item_zzxz_selected" class="item_svg item_zzxz_selected"></div>
+                    <div id="item_zzxz" class="hide item_svg item_zzxz"></div>
+                </div>
+            </a>
+            <div class="tip_top_triangleBG">
+                <div class="tip_top_triangle"></div>
+            </div>
+        </li>
+        <li class="width20" data-type="zmyq">
+            <a href="javascript:void(0);" class="thumbnail">
+                <h4 class="item_title mediumfont">智媒引擎</h4>
+                <p class="item_desc">快速掌握新闻事件全貌</p>
+                <div class="item_img">
+                    <div id="item_zmyq_selected" class="hide item_zmyq_selected"></div>
+                    <div id="item_zmyq" class="item_svg item_zmyq"></div>
+                </div>
+            </a>
+            <div class="tip_top_triangleBG">
+                <div class="tip_top_triangle"></div>
+            </div>
+        </li>
+        <li class="width20" data-type="yyzx">
+            <a href="javascript:void(0);" class="thumbnail">
+                <h4 class="item_title mediumfont">语音转写</h4>
+                <p class="item_desc">识别率高达95%+</p>
+                <div  class="item_img ">
+                    <div id="item_yyzx_selected" class="item_yyzx_selected hide"></div>
+                    <div id="item_yyzx" class="item_yyzx"></div>
+                </div>
+            </a>
+            <div class="tip_top_triangleBG">
+                <div class="tip_top_triangle"></div>
+            </div>
+        </li>
+        <li class="width20" data-type="sjmf">
+            <a href="javascript:void(0);" class="thumbnail">
+                <h4 class="item_title mediumfont">数据魔方</h4>
+                <p class="item_desc">数据采集技术、大数据分析</p>
+                <div class="item_img">
+                    <div id="item_sjmf_selected" class="item_sjmf_selected hide"></div>
+                    <div id="item_sjmf" class="item_sjmf"></div>
+                </div>
+            </a>
+            <div class="tip_top_triangleBG">
+                <div class="tip_top_triangle"></div>
+            </div>
+        </li>
+        <li class="width20" data-type="spss">
+            <a href="javascript:void(0);" class="thumbnail">
+                <h4 class="item_title mediumfont">视频搜索</h4>
+                <p class="item_desc">"快手"视频搜索引擎</p>
+                <div class="item_img">
+                    <div id="item_spss_selected" class="item_spss_selected hide"></div>
+                    <div id="item_spss" class="item_spss"></div>
+                </div>
+            </a>
+            <div class="tip_top_triangleBG">
+                <div class="tip_top_triangle"></div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="container tip_content">
+    <ul>
+        <li class="width100 tip_content_item content_zzxz content_active">
+            <div class="tip_content_item_left">
+                <h3 class="mediumfont">智能写作</h3>
+                <button class="btn tip_content_item_btn" data-url="/iwriting">进一步了解</button>
+            </div>
+            <p class="tip_content_item_right">智能写作是百度公司在人民日报人民号创作平台推出的“创作大脑”，充分利用百度在内容理解、语言生成、知识推理、机器学习等方面的技术积累，为用户提供内容纠错、发文助手、自动封面三项创作服务。</p>
+        </li>
+        <li class="width100 tip_content_item content_zmyq hide">
+            <div class="tip_content_item_left">
+                <h3>智媒引擎</h3>
+                <button class="btn tip_content_item_btn" data-url="/gointroduce">进一步了解</button>
+            </div>
+            <p class="tip_content_item_right">智媒引擎通过多种数据挖掘算法、语义分析算法，梳理新闻分类、提取新闻要素、统计媒体报道，帮助用户快速掌握新闻事件全貌、发现新闻热点、滤清事物人物关系、深挖新闻线索，推荐新闻素材。</p>
+        </li>
+        <li class="width100 tip_content_item content_yyzx hide">
+            <div class="tip_content_item_left">
+                <h3>语音转写</h3>
+                <button class="btn tip_content_item_btn" data-url="/voicetrans">进一步了解</button>
+            </div>
+            <p class="tip_content_item_right">讯飞听见APP是一款语音转文字的手机应用，依托科大讯飞基于世界领先水平的智能语音及语言技术提供高效的语音转文字服务，识别率高达95%＋，1小时音频最快5分钟出稿！</p>
+        </li>
+        <li class="width100 tip_content_item content_sjmf hide">
+            <div class="tip_content_item_left">
+                <h3>数据魔方</h3>
+<button class="btn tip_content_item_btn" data-type="1" data-url="/magicdata">进一步了解</button>
+            </div>
+            <p class="tip_content_item_right">基于国内先进的数据采集技术、大数据分析技术，汇集海量数据，进行人工智能分析。帮助媒体以最低的成本，对数据进行深度挖掘。同时促进媒体的采编发融合，让媒体变得更加智慧。</p>
+        </li>
+        <li class="width100 tip_content_item content_spss hide">
+            <div class="tip_content_item_left">
+                <h3>视频搜索</h3>
+                <button class="btn tip_content_item_btn" data-url="/videosearch">进一步了解</button>
+            </div>
+            <p class="tip_content_item_right">快手视频搜索引擎利用国际领先的人工智能技术，实现对视频、音频和图像的多媒体理解，可根据关键字、发布时间和发布地点精准搜索快手平台内海量视频资源，为媒体提供源源不断的内容和选题支持。</p>
+        </li>
+    </ul>
+</div>
+
+<div class="footer">
+    <h3 class="textcenter mediumfont">合作伙伴</h3>
+    <div class="center_tip_wrapper width100">
+        <div class="center_tip_container">
+            <a href="javascript:void(0);" class="width20 work_team team_baidu">
+            </a>
+            <a href="javascript:void(0);" class="width20 work_team team_ronglian">
+            </a>
+            <a href="javascript:void(0);" class="width20 work_team team_keda">
+            </a>
+            <a href="javascript:void(0);" class="width20 work_team team_fanwen">
+            </a>
+            <a href="javascript:void(0);" class="width20 work_team team_kuaishou">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container info_enter">
+    <div class="info_enter_item">
+        <div class="info_enter_item_left">
+            <p class="mediumfont">立即开始吧</p>
+            <p class="mediumfont">仅需提供基本资料，便可使用"创作大脑"</p>
+        </div>
+        <div class="info_enter_item_right">
+            <div class="info_rigster_outer">
+                <div class="register_key_bg"></div>
+                <button class="btn info_rigster mediumfont">立即注册</button>
+            </div>
+            <div class="info_login_outer">
+                <div class="login_key_bg"></div>
+                <button class="btn info_login mediumfont">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="alertDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p style="text-align:center;margin-bottom:0px">用户名或密码错误</p>
+
+                <div style="margin-top:10px;text-align:right">
+                    <button type="button" class="btn btn-red btn-sm" data-dismiss="modal">确定</button>
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="frontend/common/footer :: footer"></div>
+</body>
+</html>
+<script src="../../../static/js/frontend/plugin/showtoast/tip.js" th:src="@{/js/frontend/plugin/showtoast/tip.js}"></script>
+<script src="../../../static/js/frontend/plugin/bootstrap.min.js" th:src="@{/js/frontend/plugin/bootstrap.js}"></script>
+<script src="../../../static/js/frontend/common/minHeader.js" th:src="@{/js/frontend/common/minHeader.js}"></script>
+<script src="../../../static/js/frontend/index/index.js" th:src="@{/js/frontend/index/index.js}"></script>

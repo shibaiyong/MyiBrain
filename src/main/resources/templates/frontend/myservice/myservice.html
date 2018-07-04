@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>我的服务</title>
+    <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+<link rel="shortcut icon" type="image/x-icon" href="../../../static/images/logo/favicon.ico" th:href="@{/images/logo/favicon.ico}"
+/>
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../../static/css/common/common.css" th:href="@{/css/common/common.css}"/>
+    <style>
+        .login_content{
+            height: auto;
+            padding: 55px 0;
+            width: 820px;
+            margin-bottom: 60px;
+            min-height: 615px;
+        }
+        .service-wrapper{
+            width:100%;
+            padding:0 124px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .login_title{
+            overflow: hidden;
+            padding:0;
+            width:100%;
+        }
+        .server-content{
+        	position: relative;
+            width:142px;
+            height:180px;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 60px;
+            padding-top: 20px;
+            background:url("images/myservice/myservice_yin.png") no-repeat 0 bottom;
+            float:left;
+            margin-left:72px;
+        }
+        .server-content:nth-child(3n+1){
+            margin-left: 0px;
+        }
+        .server-content[data-flag="iwriting"], .server-content[data-flag="voicetrans"]{
+        	cursor: default;
+        }
+        .service-wrapper .server-content .bottom-wrapper>.iwriting,.service-wrapper .server-content .bottom-wrapper>.voicetrans{
+        	cursor: default;
+        } 
+        .server-content img{
+        	width: 70px;
+        	height: 80px;
+        }
+        .login_content .form-horizontal{
+            width:100%;
+            min-height: 505px;
+        }
+
+        .service-wrapper .bottom-wrapper{
+        	width: 100%;
+        	height: 86px;
+        	padding-top: 25px;
+        }
+        .service-wrapper .server-content .bottom-wrapper>a{
+            display: block;
+            font-size: 24px;
+            height: 34px;
+            line-height: 34px;
+            color:#333;
+            text-align: center;
+            text-decoration: none;
+        }
+        .service-wrapper .server-content .bottom-wrapper .gomore{
+        	display: block;
+        	width: 100px;
+        	height: 25px;
+        	line-height: 25px;
+        	position: absolute;
+        	right: 60px;
+        	bottom: 0px;
+        	font-size: 12px;
+        	color: #444444;
+        	text-align: center;
+        	border-radius: 4px;
+        	
+        }
+
+        .service-wrapper .server-content  .bottom-wrapper .moreBig{
+        	font-size: 24px;
+        	height: 34px;
+            line-height: 34px;
+        }
+        .service-wrapper .server-content  .bottom-wrapper .toSmall{
+        	font-size: 12px;
+        	height: 25px;
+        	line-height: 25px;
+        }
+        .login_content .form-group.title-choose{
+            text-align: center;
+            width:473px;
+            margin:0 auto;
+            margin-bottom:26px;
+            padding:0 15px;
+        }
+        hr{
+            display: block;
+            margin: 0 auto;
+            width:538px;
+            margin-bottom:40px;
+        }
+        @media screen and (max-width: 1600px){
+            .server-content:nth-child(n+4){
+                /*margin-top: 30px;*/
+            }
+            .server-content{
+                /*margin-left: 22px;*/
+            }
+            .form-group.title-choose{
+                padding:0 20px;
+            }
+        }
+        .login_content .login_title .opt span{
+            color:#333333;
+        }
+    </style>
+    </head>
+    <body>
+    <div id="header" th:include="frontend/common/behind-header :: header"></div>
+    <form name='paySubmit' id="sub" method='post'  action='http://inewsengine.com/api/asserver/JGauthorize' >
+        <input type='hidden' name='access_token' value=''/>
+        <input type='hidden' name='signature' value=''/>
+        <input type='hidden' name='account' value=''/>
+        <input type='hidden' name='redirectUrl' value=''/>
+    </form>
+
+    <div class='login_content visiHide'>
+        <div class="form-horizontal" style="width:100%;">
+            <div class="form-group title-choose">
+                <div class="col-sm-10 login_title">
+                    <a href="javascript:;" class="opt"><img src="./images/myservice/opt.png"/><span>我的服务</span></a>
+                    <a href="javascript:;" class="per"><img src="./images/myservice/per1.png"/><span>个人资料</span></a>
+                    <a href="javascript:;" class="pas"><img src="./images/myservice/pass1.png"/><span>修改密码</span></a>
+                </div>
+            </div>
+            <hr/>
+            <div id="myService" class='service-wrapper'></div>
+        </div>
+    </div>
+    <div id="loginBottom" th:include="frontend/common/footer :: footer"></div>
+    </body>
+    </html>
+    <script src="../../../static/js/frontend/plugin/showtoast/tip.js" th:src="@{/js/frontend/plugin/showtoast/tip.js}"></script>
+    <script src="../../../static/js/frontend/common/behindHeader.js" th:src="@{/js/frontend/common/behindHeader.js}"></script>
+    <script src="../../../static/js/frontend/myservice/myservice.js" th:src="@{/js/frontend/myservice/myservice.js}"></script>
+    

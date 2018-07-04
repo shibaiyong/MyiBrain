@@ -1,0 +1,47 @@
+.login_content{
+    min-height: 615px;
+}
+.form_inner_wrapper{
+    width: 528px;
+    height: auto;
+    margin: 0 auto;
+}
+.form-group.fixedcenter{
+    margin-right: 0;
+}
+.user_error_tip,
+.password_error_tip {
+    margin-bottom: 0;
+    color: #fe4246;
+    visibility: hidden;
+}
+.form-horizontal {
+    min-width: 498px;
+    min-height: 509px;
+    box-sizing: border-box;
+}
+.y_login {
+    display: none;
+}
+.login_content .login_titlee{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+}
+/* #header{
+    height: 270px;
+}
+.login_content{
+    margin-top: 0;
+}
+.footer_bottom{
+    margin-top: 60px;
+}
+.footer_resize {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+} */

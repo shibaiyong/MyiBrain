@@ -1,0 +1,258 @@
+.width1{width:1%;}.width2{width:2%;}.width3{width:3%;}.width4{width:4%;}.width5{width:5%;}
+.width6{width:6%;}.width7{width:7%;}.width8{width:8%;}.width9{width:9%;}.width10{width:10%;}
+.width11{width:11%;}.width12{width:12%;}.width13{width:13%;}.width14{width:14%;}.width15{width:15%;}
+.width16{width:16%;}.width17{width:17%;}.width18{width:18%;}.width19{width:19%;}.width20{width:20%;}
+.width21{width:21%;}.width22{width:22%;}.width23{width:23%;}.width24{width:24%;}.width25{width:25%;}
+.width26{width:26%;}.width27{width:27%;}.width28{width:28%;}.width29{width:29%;}.width30{width:30%;}
+.width31{width:31%;}.width32{width:32%;}.width33{width:33%;}.width34{width:34%;}.width35{width:35%;}
+.width36{width:36%;}.width37{width:37%;}.width38{width:38%;}.width39{width:39%;}.width40{width:40%;}
+.width41{width:41%;}.width42{width:42%;}.width43{width:43%;}.width44{width:44%;}.width45{width:45%;}
+.width46{width:46%;}.width47{width:47%;}.width48{width:48%;}.width49{width:49%;}.width50{width:50%;}
+.width51{width:51%;}.width52{width:52%;}.width53{width:53%;}.width54{width:54%;}.width55{width:55%;}
+.width56{width:56%;}.width57{width:57%;}.width58{width:58%;}.width59{width:59%;}.width60{width:60%;}
+.width61{width:61%;}.width62{width:62%;}.width63{width:63%;}.width64{width:64%;}.width65{width:65%;}
+.width66{width:66%;}.width67{width:67%;}.width68{width:68%;}.width69{width:69%;}.width70{width:70%;}
+.width71{width:71%;}.width72{width:72%;}.width73{width:73%;}.width74{width:74%;}.width75{width:75%;}
+.width76{width:76%;}.width77{width:77%;}.width78{width:78%;}.width79{width:79%;}.width80{width:80%;}
+.width81{width:81%;}.width82{width:82%;}.width83{width:83%;}.width84{width:84%;}.width85{width:85%;}
+.width86{width:86%;}.width87{width:87%;}.width88{width:88%;}.width89{width:89%;}.width90{width:90%;}
+.width91{width:91%;}.width92{width:92%;}.width93{width:93%;}.width94{width:94%;}.width95{width:95%;}
+.width96{width:96%;}.width97{width:97%;}.width98{width:98%;}.width99{width:99%;}.width100{width:100%;}
+/* @font-face {font-family: "blackfont";
+    src: url('SourceHanSansCN-Normal.eot');
+    src: url('SourceHanSansCN-Normal.eot?#font-spider') format('embedded-opentype'),
+    url('SourceHanSansCN-Normal.ttf?t=1527753433702') format('truetype'),
+    url('SourceHanSansCN-Normal.woff') format('woff'),
+    url('SourceHanSansCN-Normal.svg') format('svg');
+}
+@font-face {font-family: "mediumfont";
+
+    src: url('SourceHanSansCN-Medium.eot');
+    src: url('SourceHanSansCN-Medium.eot?#font-spider') format('embedded-opentype'),
+    url('SourceHanSansCN-Medium.ttf?t=1527753433702') format('truetype'),
+    url('SourceHanSansCN-Medium.woff') format('woff'),
+    url('SourceHanSansCN-Medium.svg') format('svg');
+}
+@font-face {font-family: "boldfont";
+
+    src: url('SourceHanSansCN-Medium.eot');
+    src: url('SourceHanSansCN-Bold.eot?#font-spider') format('embedded-opentype'),
+    url('SourceHanSansCN-Bold.ttf?t=1527753433702') format('truetype'),
+    url('SourceHanSansCN-Bold.woff') format('woff'),
+    url('SourceHanSansCN-Bold.svg') format('svg');
+}
+.blackfont{
+    font-family:"blackfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.mediumfont{
+    font-family:"mediumfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.boldfont{
+    font-family:"boldfont" !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} */
+.floatleft{float:left;}.floatright{float: right;}
+
+.fontblod{
+    font-weight: bold;
+}
+
+.textcenter{
+    text-align: center;
+}
+.textright{
+    text-align: right;
+}
+.textleft{
+    text-align: left;
+}
+
+.clearFix::after{
+    display:block;clear:both;content:"";visibility:hidden;height:0px;font-size: 0px;width:0px;position: absolute;
+}
+.clearFix{
+    zoom:1;
+}
+
+body,html,p,div,h1,h2,h3,h4,ul,li,ol,dl,dt,dd,fieldset,th,table,td{
+    margin:0;
+    padding:0;
+    /* font-family: 'blackfont'; */
+    font-family: "PingFang SC", "Microsoft YaHei", "Microsoft JhengHei ";
+}
+body,html{
+    height:100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border:0;
+    border:none;
+}
+ul li,ol li{
+    list-style: none;
+}
+
+html,body{
+    height: 100%;
+}
+/* .login_container ul,.login_container ul li{
+    margin:0;padding:0;
+} */
+
+#header{
+    height: 70px;
+}
+.login_container{
+    /* width:100%;
+    height:100%; */
+    /*background: url(../../images/create_brain_01.jpg) no-repeat;
+    background-size:100% 100%;*/
+}
+.login_content{
+    /*width:60%;*/
+    padding: 53px 0;
+    margin:0 auto;
+    background:white;
+    margin-top:-120px;
+    box-shadow: 0 0 20px rgb(207,207,207);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width:820px;
+}
+.login_content .form-control{
+    border-color:#fe4246;
+    border-radius: 0%;
+    width:380px;
+}
+.login_content .form-group:nth-child(1){
+    border-color:#fe4246;
+    margin-bottom: 55px;
+}
+.login_content .control-label{
+    color:#fe4246;
+    font-weight: bold;
+}
+.login_content .checkbox{
+    text-align: right;
+    padding-right: 10px;
+}
+.login_content .checkbox label{
+    color:#fe4246;
+}
+.login_content .checkbox a{
+	display: inherit;
+	color: #fe4246;
+	text-underline: none;
+	text-decoration: none;
+}
+.login_content .checkbox a:hover{
+	text-underline: none;
+	text-decoration: none;
+}
+.login_content .login_btn{
+    text-align: center;
+}
+.login_content .login_btn .btn-default{
+    background:#fe4246;
+    color:white;
+    width: 100px;
+}
+.login_content .login_title{
+    text-align: center;
+}
+.login_content .login_title img{
+    width:48px;
+    height: 48px;
+}
+.login_content .login_title>a{
+    float:left;
+    text-decoration: none;
+    margin-left:131px;
+}
+.login_content .login_title>a:nth-child(3n+1){
+    margin-left:0px;
+}
+.login_content .login_title>a>span{
+    display: block;
+    margin-top: 10px;
+    color:#bfbfbf;
+    text-align: center;
+}
+.modal-dialog{
+    margin-top:15%;
+}
+
+input{
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+	box-shadow: 0 0 0px 1000px white inset !important;
+	outline: none !important;
+}
+/*复写bootstrap的样式*/
+.modal-content{
+	top: 50px;
+	height: 160px;
+	width: 500px;
+}
+.modal-content .modal-body{
+	height: 100%;
+	padding-top: 30px;
+}
+.modal-content .modal-body p{
+	text-align: center;
+    margin-bottom: 0px;
+    padding: 0 40px;
+    line-height: 25px;
+}
+.modal-content .modal-body .btnWrp{
+	position: absolute;
+	left: 200px;
+	bottom: 20px;
+	text-align: center;
+}
+
+.modal-content .modal-body .btnWrp .centerBtn{
+    background: #fe4246;
+    color: white;
+    width: 100px;
+}
+.form-group.fixedcenter{
+    margin-right: 70px;
+}
+
+.login_content .form-group.fixedcenter label{
+    color:#666666;
+}
+.login_content .form-group.fixedcenter .form-control{
+    border-color:#bfbfbf;
+    /*color:#bfbfbf;*/
+}
+
+.visiHide{
+    visibility: hidden;
+}
+
+/*html {*/
+    /*overflow-y: scroll;*/
+/*}*/
+/*.login_outer_container {*/
+    /*overflow-y: auto;*/
+    /*overflow-x: hidden;*/
+/*}*/
+/*body {*/
+    /*width: 100vw;*/
+    /*overflow: hidden;*/
+/*}*/

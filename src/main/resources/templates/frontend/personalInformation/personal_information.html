@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>个人资料</title>
+    <script src='https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js'></script>
+<link rel="shortcut icon" type="image/x-icon" href="../../../static/images/logo/favicon.ico" th:href="@{/images/logo/favicon.ico}"
+/>
+    <link rel="stylesheet" href="../../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" href="../../../static/css/common/common.css" th:href="@{/css/common/common.css}"/>
+    <style>
+        .login_content{
+            height: auto;
+            padding:55px 0;
+            display: block;
+            min-height: 615px;
+        }
+		.user_error_tip,.password_error_tip,.mobile_error_tip,.email_error_tip,.company_error_tip,.job_error_tip,.wechat_error_tip{
+            margin-bottom: 0;
+            color:#fe4246;
+            visibility: hidden;
+        }
+        .login_content .login_title .per span{
+            color:#333333;
+        }
+        .login_content .form-group.title-choose{
+            margin-bottom:26px;
+        }
+        hr{
+            display: block;
+            margin: 0 auto;
+            width:100%;
+            margin-bottom:40px;
+        }
+    </style>
+    </head>
+    <body>
+    <div id="header" th:include="frontend/common/behind-header :: header"></div>
+    <div class='login_content visiHide'>
+
+        <div class="form-horizontal" style="width:538px;margin:0 auto;">
+            <div class="form-group title-choose">
+                <div class="col-sm-offset-1 col-sm-10 login_title">
+                    <a href="javascript:;" class="opt"><img src="../images/myservice/opt1.png"/><span>我的服务</span></a>
+                    <a href="javascript:;" class="per"><img src="../images/myservice/per.png"/><span>个人资料</span></a>
+                    <a href="javascript:;" class="pas"><img src="../images/myservice/pass1.png"/><span>修改密码</span></a>
+                </div>
+            </div>
+            <hr/>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 user_error_tip">
+                    姓名不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputUserName" class="col-sm-2 control-label">姓名</label>
+                <div class="col-sm-10">
+                    <input type="text" id="inputUserName" class="form-control username"/>
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 mobile_error_tip">
+                    手机号不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputMobile" class="col-sm-2 control-label">手机</label>
+                <div class="col-sm-10">
+                    <input type="text"  id="inputMobile" class="form-control mobile"/>
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 email_error_tip">
+                    邮箱不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputEmail" class="col-sm-2 control-label">邮箱</label>
+                <div class="col-sm-10">
+                    <input type="email" id="inputEmail" class="form-control email" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 wechat_error_tip">
+                    微信不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label class="col-sm-2 control-label">微信</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control wechat" id="wechat" placeholder="请输入微信号或绑定的手机号" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0;display: none;">
+                <div class="col-sm-offset-2 col-sm-10 company_error_tip">
+                    单位不能为空！
+                </div>
+            </div>
+            <div class="form-group" style="display:none;">
+                <label for="inputUnit" class="col-sm-2 control-label">单位</label>
+                <div class="col-sm-10">
+                    <input type="text" id="inputUnit" class="form-control company" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0;display: none;">
+                <div class="col-sm-offset-2 col-sm-10 job_error_tip">
+                    职位不能为空！
+                </div>
+            </div>
+                <div class="form-group" style="margin-bottom:50px;display: none;">
+                    <label for="inputPosition" class="col-sm-2 control-label">职称</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="inputPosition" class="form-control job" />
+                    </div>
+                </div>
+            <div class="form-group" style="margin-top: 50px;">
+                <div class="col-sm-offset-1 col-sm-10 login_btn" style="margin-left:10%;">
+                <button class="btn btn-default" id = 'infoUpdate'>修改</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class='login_content modify_login_content' style="display:none;">
+
+        <div class="form-horizontal" style="width:438px;margin:0 auto;">
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10 login_title">
+                    <a href="javascript:;" class="opt"></a>
+                    <a href="javascript:;" class="per"></a>
+                    <a href="javascript:;" class="pas"></a>
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 user_error_tip">
+                    姓名不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputUserName" class="col-sm-2 control-label">姓名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control username" placeholder="请输入您的姓名" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 mobile_error_tip">
+                    手机号不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputMobile" class="col-sm-2 control-label">手机</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control mobile" placeholder="请输入您的11位手机号" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 email_error_tip">
+                    邮箱不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label for="inputEmail" class="col-sm-2 control-label">邮箱</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control email" placeholder="请输入您的邮箱" />
+                </div>
+            </div>
+            <div class="form-group fixedcenter" style="margin-bottom: 0;">
+                <div class="col-sm-offset-2 col-sm-10 wechat_error_tip">
+                    微信不能为空！
+                </div>
+            </div>
+            <div class="form-group fixedcenter">
+                <label class="col-sm-2 control-label">微信</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control wechat" placeholder="请输入微信号或绑定的手机号" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0;display: none;">
+                <div class="col-sm-offset-2 col-sm-10 company_error_tip">
+                    单位不能为空！
+                </div>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label for="inputUnit" class="col-sm-2 control-label">单位</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control company" placeholder="请输入您所属单位名称或公司名称" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0;display: none;">
+                <div class="col-sm-offset-2 col-sm-10 job_error_tip">
+                    职位不能为空！
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom:50px;display: none;">
+                <label for="inputPosition" class="col-sm-2 control-label">职称</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control job" placeholder="请输入您所属单位或公司的职位" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10 login_btn" style="margin-left:10%;">
+                    <button class="btn btn-default" id = 'complete'>完成</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="loginBottom" th:include="frontend/common/footer :: footer"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="alertDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p style="text-align:center;margin-bottom:0px">用户名或密码错误</p>
+
+                    <div style="margin-top:10px;text-align:right">
+                        <button type="button" class="btn btn-red btn-sm" data-dismiss="modal">确定</button>
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
+    <script src="../../../static/js/frontend/plugin/showtoast/tip.js" th:src="@{/js/frontend/plugin/showtoast/tip.js}"></script>
+    <script src="../../../static/js/frontend/plugin/bootstrap.min.js" th:src="@{/js/frontend/plugin/bootstrap.js}"></script>
+    <script src="../../../static/js/frontend/common/behindHeader.js" th:src="@{/js/frontend/common/behindHeader.js}"></script>
+    <script th:src="@{/js/frontend/personalInfo/personalInfo.js}"></script>
